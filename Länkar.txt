@@ -1,3 +1,9 @@
 Draw io:
 
 https://www.draw.io/#G12VK10Jp_Ys1wpO1K2_4TQfx5UPLPji5i
+
+Länk gällande databas:
+https://stackoverflow.com/questions/22036053/how-can-i-install-pimcore-using-wamp-or-xampp-on-windows-8
+
+innodb_large_prefix = ON	
+innodb_file_format = Barracuda
