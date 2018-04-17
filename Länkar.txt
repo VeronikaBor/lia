@@ -7,3 +7,6 @@ https://stackoverflow.com/questions/22036053/how-can-i-install-pimcore-using-wam
 
 innodb_large_prefix = ON	
 innodb_file_format = Barracuda
+
+mysql -h localhost -u root
+CREATE DATABASE pimcore_db CHARACTER SET utf8 COLLATE utf8_general_ci;
