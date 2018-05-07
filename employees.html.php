@@ -23,14 +23,13 @@ $this->extend('layout.html.php');
 		  <h4><?= $this->escape($employees->getTitle()); ?></h4>
        <div class="employee_picture">
     <?php
-    $picture = $employees->getPicture();
-    if($picture instanceof \Pimcore\Model\Asset\Image):
-        /** @var \Pimcore\Model\Asset\Image $picture */
+    $image = $employees->getImage();
+    if($image instanceof \Pimcore\Model\Asset\Image):
+        /** @var \Pimcore\Model\Asset\Image $image */
         
     ?>
-        <?= $picture->getThumbnail("employee_picture")->getHTML(); ?>
+        <?= $image->getThumbnail("employee_image")->getHTML(); ?>
     <?php endif; ?>
-    <!--<?= $product->getDescription(); ?>-->
 </div>
     </div>
     <?php endif; ?>
