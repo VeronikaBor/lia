@@ -1,4 +1,6 @@
 <?php
+use \Pimcore\Model\DataObject;
+
 /**
  * @var \Pimcore\Templating\PhpEngine $this
  * @var \Pimcore\Templating\PhpEngine $view
@@ -6,6 +8,9 @@
  */
 
 $this->extend('layout.html.php');
+
+$emplist = new DataObject\Employees\Listing();
+
 
 ?>
 
@@ -15,21 +20,27 @@ $this->extend('layout.html.php');
         echo $this->href('employees');
     else: ?>
     <div id="employees">
+    
         <?php
+        
+foreach ($emplist as $item) {
+   
+ 
+
         /** @var \Pimcore\Model\DataObject\Employees $employees */
         $employees = $this->href('employees')->getElement();
         ?>
-        <h3><?= $this->escape($employees->getName()); ?></h3>
-		  <h4><?= $this->escape($employees->getTitle()); ?></h4>
+        <h3><?= $this->escape($item->getName()); ?></h3>
+		  <h4><?= $this->escape($item->getTitle()); ?></h4>
        <div class="employee_picture">
     <?php
-    $image = $employees->getImage();
+    $image = $item->getImage();
     if($image instanceof \Pimcore\Model\Asset\Image):
         /** @var \Pimcore\Model\Asset\Image $image */
-        
+   
     ?>
         <?= $image->getThumbnail("employee_image")->getHTML(); ?>
-    <?php endif; ?>
+    <?php endif; }?>
 </div>
     </div>
     <?php endif; ?>
