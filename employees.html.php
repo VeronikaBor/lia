@@ -9,12 +9,14 @@ use \Pimcore\Model\DataObject;
 
 $this->extend('layout.html.php');
 
+
 $emplist = new DataObject\Employees\Listing();
+$emplist->setCondition("o_ParentID LIKE ?", "%4%");
+$emplist->load();
 
 
 ?>
 
-<h1><?= $this->input("headline", ["width" => 540]); ?></h1>
 <div class="employees-info">
     <?php if($this->editmode):
         echo $this->href('employees');
@@ -22,10 +24,10 @@ $emplist = new DataObject\Employees\Listing();
     <div id="employees">
     
         <?php
-        
+ 
 foreach ($emplist as $item) {
    
- 
+{
 
         /** @var \Pimcore\Model\DataObject\Employees $employees */
         $employees = $this->href('employees')->getElement();
@@ -40,7 +42,7 @@ foreach ($emplist as $item) {
    
     ?>
         <?= $image->getThumbnail("employee_image")->getHTML(); ?>
-    <?php endif; }?>
+    <?php endif; }}?>
 </div>
     </div>
     <?php endif; ?>
