@@ -10,8 +10,10 @@ use \Pimcore\Model\DataObject;
 $this->extend('layout.html.php');
 
 
+$document_key = $this -> getKey();
+
 $emplist = new DataObject\Employees\Listing();
-$emplist->setCondition("o_ParentID LIKE ?", "%4%");
+$emplist->setCondition("o_Path LIKE ?", "%$document_key%");
 $emplist->load();
 
 
