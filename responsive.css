@@ -1,13 +1,10 @@
 
-.citytext h1,.city_text h1 {
-    font-size: 40px;
-   }
-   .citytext p{
-     font-size: 20px;
-    }
-    .city_text p {
-     font-size: 20px;
-    }
+.city_text h1 {
+  font-size: 35px;
+}
+.city_text p {
+  font-size: 20px;
+}
     
     
 
@@ -16,34 +13,23 @@
   .employees {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    
   }
-  .citytext h1,.city_text h1 {
-    font-size: 23px;
- 
-   }
-   .citytext p{
-     font-size: 14px;
-     
-    }
-    .city_text p {
-     font-size: 14px;
-   
-    }
+  .city_text h1 {
+    font-size: 15px;
+  }
+  .city_text p {
+    font-size: 10px; 
+  }
     
 }
 @media screen and (max-width: 800px)
 {
-  .citytext h1,.city_text h1 {
-    font-size: 20px;
- 
-   }
-   .citytext p{
-     font-size: 12px;
-    }
-    .city_text p {
-     font-size: 12px;
-    }
+  .city_text h1 {
+    font-size: 15px;
+  }
+  .city_text p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 725px)
@@ -52,31 +38,19 @@
     display:grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .citytext h1,.city_text h1 {
-    font-size: 10px;
- 
-   }
-   .citytext p{
-     font-size: 8px;
-    
-    }
+    .city_text h1 {
+      font-size: 10px;
+  }
     .city_text p {
-     font-size: 8px;
+      font-size: 8px;
 
-    }
+  }
 }
 @media screen and (max-width: 460px)
 {
-  .citytext h1,.city_text h1 {
+  .city_text h1 {
     font-size: 15px;
- 
-   }
-   .citytext p{
-     font-size: 10px;
-    }
-    .city_text p {
-     font-size: 10px;
-    }
+  }
 }
 @media screen and (max-width: 460px)
 {
